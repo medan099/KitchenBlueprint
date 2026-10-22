@@ -1,0 +1,173 @@
+# Website UI/UX Improvements and Layout Refinements
+
+## General Instructions
+
+Improve the existing website by implementing the design refinements and functional fixes described below. The objective is to create a more polished, professional, and user-friendly experience while preserving the existing brand identity.
+
+Before making changes, inspect the relevant files, components, layouts, and existing behavior to understand the current implementation.
+
+**Important requirements:**
+- Preserve the existing sitemap, content, and overall navigation structure.
+- Maintain the current brand identity, typography, and color palette.
+- Focus on improving spacing, visual hierarchy, layout efficiency, and interaction behavior.
+- Ensure all changes work correctly on desktop, tablet, and mobile.
+- Fix underlying functional issues rather than applying superficial styling workarounds.
+- Avoid unnecessary whitespace, oversized sections, and layouts that force visitors to scroll excessively.
+- Reuse existing components and styling conventions wherever possible.
+
+---
+
+## 1. Global Navigation Bar
+
+### Remove the Contact Link
+- Remove the **"Contact"** link from the navigation bar to avoid duplication with the existing quote-request or contact CTA.
+- Preserve the remaining navigation items and their existing destinations.
+- Adjust the spacing and alignment of the navbar to maintain a balanced appearance after removing the link.
+
+### Fix Mobile Navigation Behavior
+- Currently, the mobile navigation menu opens or becomes visible again whenever the visitor navigates to another page.
+- Fix this behavior so that the mobile menu closes automatically after the visitor selects a navigation link.
+- Ensure that navigating between pages does not leave the menu unexpectedly open or display an awkward transition.
+- Preserve the existing mobile menu design and opening/closing interactions.
+- Verify that the behavior works consistently across all pages.
+
+---
+
+## 2. Homepage (`index.html`)
+
+### Hero Section
+- Reduce the overall height of the hero section to create a more compact and balanced first impression.
+- Move the hero image and the accompanying content slightly upward, including the description and call-to-action (CTA).
+- Eliminate unnecessary vertical space while preserving the visual impact of the hero.
+- Ensure that the headline, description, image, and CTA remain properly aligned and readable across different screen sizes.
+- Maintain a balanced composition on both desktop and mobile.
+
+### Manifest Section
+- Remove the animated or moving icons currently displayed in the bottom-left area of the Manifest section.
+- Ensure that removing these icons does not affect the surrounding layout, spacing, or other section elements.
+- Clean up any unnecessary spacing left behind after their removal.
+
+### "5 étapes, un seul..." Section
+- Reduce the excessive whitespace below the **"5 étapes, un seul..."** section.
+- Adjust the bottom margin and padding to create a more natural transition into the following section.
+- Preserve sufficient spacing for readability and visual separation.
+
+### Testimonial Section and Final CTA
+- Remove the excessive whitespace above the CTA section containing the headline:
+
+  **"Vous avez une cuisine à transformer ?"**
+
+- Reduce the top margin or padding as appropriate so that the CTA feels visually connected to the preceding testimonial section.
+- Improve the CTA button's text contrast. The current light-green background combined with white text does not provide a sufficiently clear visual result.
+- Change the CTA text color to a dark, readable color that contrasts appropriately with the light-green background.
+- Preserve the existing button styling and brand colors wherever possible, changing only what is necessary to improve readability.
+- Verify that the CTA remains accessible and visually consistent across desktop and mobile.
+
+---
+
+## 3. Expertise Page (`expertise.html`)
+
+### Fix Sticky Tabs and Navbar Alignment
+- The expertise tabs become sticky while scrolling, but there is currently an unwanted gap between the sticky tabs and the sticky navigation bar when the tabs reach their pinned position.
+- Fix the sticky positioning so that the tabs sit directly beneath the navbar without an unnecessary gap.
+- Account for the navbar's actual height, including any changes in height or styling when it becomes sticky.
+- Avoid overlapping content, layout jumps, or inconsistent positioning during scrolling.
+- Ensure the solution works correctly across desktop, tablet, and mobile layouts.
+
+### Highlight the Active Tab
+- When a visitor scrolls to an expertise section or selects its corresponding tab, highlight the relevant tab using the website's brand color.
+- Ensure that the active state updates correctly as the visitor moves between sections.
+- Apply consistent styling to the active tab, such as brand-colored text, an underline, or another existing design-system indicator.
+- Keep inactive tabs visually distinct from the active tab.
+- If the tabs support click-based navigation, preserve their functionality and ensure that clicking a tab scrolls to the correct section.
+- Account for the sticky navbar and tabs when calculating scroll positions so that section headings remain visible rather than being hidden behind sticky elements.
+
+---
+
+## 4. Projects Overview Page
+
+### Improve the Overall Layout
+- Rework the project listing layout to make it more visually appealing, organized, and space-efficient.
+- The current layout stacks too many elements vertically, causing visitors to scroll excessively before discovering other projects.
+- Reduce the amount of vertical space occupied by individual project entries.
+- Improve the relationship between project images, titles, descriptions, metadata, and navigation elements.
+- Use a more compact and visually structured layout, such as a responsive grid or carefully designed project cards, where appropriate for the existing design.
+- Maintain sufficient whitespace for readability without allowing individual projects to dominate the page unnecessarily.
+- Ensure that visitors can scan the portfolio quickly and discover multiple projects with less scrolling.
+
+### Fix Horizontal Alignment and Empty Space
+- The current desktop layout leaves a large amount of unused space on the right side of the projects page.
+- Rework the content container and project layout so that the available horizontal space is used more effectively.
+- Center the main project content within the available desktop viewport and reduce unnecessary empty space on either side.
+- Adjust the maximum container width, grid columns, image sizing, and alignment as needed.
+- Avoid simply stretching individual images or text blocks to fill the screen. Maintain a balanced composition with appropriate proportions.
+- Preserve the existing responsive behavior and ensure the layout adapts naturally to smaller screens.
+
+### Visual Consistency
+- Maintain consistent spacing, image proportions, card dimensions, and typography across the project listing.
+- Ensure that project images and associated text remain visually connected.
+- Preserve existing project content, links, and navigation functionality.
+
+---
+
+## 5. Project Detail Page
+
+### Add an "Après" Section
+- The project detail page currently includes an **"Avant"** section but does not provide a corresponding **"Après"** section.
+- Add a dedicated "Après" section to showcase the completed kitchen or renovation result.
+- Maintain a clear visual distinction between the before and after states.
+- Position the two sections logically so visitors can easily compare the original space with the completed project.
+- Reuse existing project data and image assets where available. If the required after images are missing, identify the missing assets rather than inventing project-specific results.
+
+### Redesign the Before-and-After Presentation
+- Improve the layout of both the "Avant" and "Après" sections.
+- Present the images using a polished gallery-style interface instead of large, vertically stacked image blocks.
+- Where appropriate, use a responsive image grid, gallery, or lightbox-style interface to make the images easier to browse.
+- Ensure that visitors can view multiple images without excessive scrolling.
+- Keep the "Avant" and "Après" labels clearly visible and consistently styled.
+- Maintain consistent image ratios, spacing, cropping, and alignment.
+- If both states contain multiple images, make it easy to distinguish which images belong to the before gallery and which belong to the after gallery.
+- Ensure that any gallery interactions, such as opening an image in a larger view or navigating between images, work correctly if implemented.
+
+### Responsive Behavior
+- On desktop, use the available horizontal space to create an attractive gallery layout.
+- On mobile, adapt the gallery to a suitable single-column or compact grid layout without horizontal overflow.
+- Ensure image controls and gallery navigation remain usable on touchscreens.
+
+---
+
+## 6. Responsive Design and Regression Checks
+
+After implementing the changes, verify the website at desktop, tablet, and mobile breakpoints.
+
+Pay particular attention to:
+- Navbar and mobile menu behavior during page navigation.
+- Hero section height and content positioning.
+- Sticky navbar and expertise tab alignment.
+- Active tab highlighting during scrolling.
+- Project overview density and horizontal alignment.
+- Before-and-after galleries on project detail pages.
+- CTA text contrast and section spacing.
+- Image sizing, page overflow, and unexpected layout shifts.
+
+---
+
+## 7. Final Validation Checklist
+
+- [ ] The "Contact" navbar link has been removed.
+- [ ] The mobile menu closes correctly after navigation and does not unexpectedly reopen.
+- [ ] The homepage hero is more compact, with its image and content positioned slightly higher.
+- [ ] The moving icons have been removed from the Manifest section.
+- [ ] Excessive whitespace below the "5 étapes, un seul..." section has been reduced.
+- [ ] The spacing above "Vous avez une cuisine à transformer ?" has been reduced.
+- [ ] The final CTA uses a readable dark text color against its light-green background.
+- [ ] The expertise tabs align correctly beneath the sticky navbar.
+- [ ] The active expertise tab is highlighted using the brand color.
+- [ ] The projects overview uses space more efficiently and reduces unnecessary vertical scrolling.
+- [ ] The desktop projects layout is properly centered and no longer leaves excessive unused space on the right.
+- [ ] Project detail pages include both "Avant" and "Après" sections.
+- [ ] Before-and-after images are presented in a polished, responsive gallery layout.
+- [ ] Existing links, project navigation, and other interactions continue to work correctly.
+- [ ] No unrelated functionality or page structure has been broken.
+
+**Final instruction:** Implement the changes directly in the existing codebase. Inspect the relevant files and understand the current implementation before editing. Prioritize clean, maintainable code and consistent visual design. After making the changes, test the affected pages and interactions to confirm that the layout and functionality work as expected. Do not introduce unnecessary dependencies or make unrelated changes.
